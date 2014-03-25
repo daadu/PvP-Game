@@ -22,5 +22,27 @@
 <body>
 	<canvas id="canvas"></canvas>
 	<script type="text/javascript" src="js/game.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript">
+	var socket = io.connect();
+	var player;
+	socket.on("disconn")
+	socket.on("number of players",function(data){
+		if(data.number==0){
+			player = 1;
+			console.log("Waiting...")
+		}else{
+			player = 2;
+			console.log("Ready....")
+			init();
+		}
+	})
+	socket.on("not ready",function(data){
+		console.log("Player limit")
+	})
+	socket.on("initalize player 1",function(data){
+		init();
+	})
+	</script>
 </body>
 </html>

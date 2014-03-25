@@ -1,0 +1,676 @@
+info: socket.io started
+Express server listening on port 3000 in development mode
+debug: client authorized
+info: handshake authorized ns3SYqj_4sZ-S83uy9ok
+debug: setting request GET /socket.io/1/websocket/ns3SYqj_4sZ-S83uy9ok
+debug: set heartbeat interval for client ns3SYqj_4sZ-S83uy9ok
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"initalize player 1","args":[{}]}
+debug: websocket writing 5:::{"name":"number of players","args":[{}]}
+{ id: 'ns3SYqj_4sZ-S83uy9ok',
+  namespace: 
+   { manager: 
+      { server: [Object],
+        namespaces: [Object],
+        sockets: [Circular],
+        _events: [Object],
+        settings: [Object],
+        handshaken: [Object],
+        connected: [Object],
+        open: [Object],
+        closed: {},
+        rooms: [Object],
+        roomClients: [Object],
+        oldListeners: [Object],
+        sequenceNumber: -87303644,
+        gc: [Object] },
+     name: '',
+     sockets: { 'ns3SYqj_4sZ-S83uy9ok': [Circular] },
+     auth: false,
+     flags: { endpoint: '', exceptions: [] },
+     _events: { connection: [Object] } },
+  manager: 
+   { server: 
+      { stack: [Object],
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 2,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        cache: {},
+        settings: [Object],
+        redirects: {},
+        isCallbacks: {},
+        _locals: [Object],
+        dynamicViewHelpers: {},
+        errorHandlers: [],
+        route: '/',
+        routes: [Object],
+        router: [Getter],
+        __usedRouter: true,
+        _connectionKey: '4:0.0.0.0:3000' },
+     namespaces: { '': [Object] },
+     sockets: 
+      { manager: [Circular],
+        name: '',
+        sockets: [Object],
+        auth: false,
+        flags: [Object],
+        _events: [Object] },
+     _events: 
+      { 'set:transports': [Object],
+        'set:store': [Function],
+        'set:origins': [Function],
+        'set:flash policy port': [Function],
+        'set:flash policy server': [Function] },
+     settings: 
+      { origins: '*:*',
+        log: true,
+        store: [Object],
+        logger: [Object],
+        static: [Object],
+        heartbeats: true,
+        resource: '/socket.io',
+        transports: [Object],
+        authorization: false,
+        blacklist: [Object],
+        'log level': 3,
+        'log colors': false,
+        'close timeout': 60,
+        'heartbeat interval': 25,
+        'heartbeat timeout': 60,
+        'polling duration': 20,
+        'flash policy server': true,
+        'flash policy port': 10843,
+        'destroy upgrade': true,
+        'destroy buffer size': 100000000,
+        'browser client': true,
+        'browser client cache': true,
+        'browser client minification': false,
+        'browser client etag': false,
+        'browser client expires': 315360000,
+        'browser client gzip': false,
+        'browser client handler': false,
+        'client store expiration': 15,
+        'match origin protocol': false },
+     handshaken: { 'ns3SYqj_4sZ-S83uy9ok': [Object] },
+     connected: { 'ns3SYqj_4sZ-S83uy9ok': true },
+     open: { 'ns3SYqj_4sZ-S83uy9ok': true },
+     closed: {},
+     rooms: { '': [Object] },
+     roomClients: { 'ns3SYqj_4sZ-S83uy9ok': [Object] },
+     oldListeners: [ [Function] ],
+     sequenceNumber: -87303644,
+     gc: 
+      { _idleTimeout: 10000,
+        _idlePrev: [Object],
+        _idleNext: [Object],
+        _idleStart: 1395777067586,
+        _onTimeout: [Function: wrapper],
+        _repeat: true } },
+  disconnected: false,
+  ackPackets: 0,
+  acks: {},
+  flags: { endpoint: '', room: '' },
+  readable: true,
+  store: 
+   { store: { options: undefined, clients: [Object], manager: [Object] },
+     id: 'ns3SYqj_4sZ-S83uy9ok',
+     data: {} },
+  _events: { error: [Function] } }
+info: transport end (undefined)
+debug: set close timeout for client ns3SYqj_4sZ-S83uy9ok
+debug: cleared close timeout for client ns3SYqj_4sZ-S83uy9ok
+debug: cleared heartbeat interval for client ns3SYqj_4sZ-S83uy9ok
+debug: discarding transport
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized vsSWDK2yUzjnWNjHy9ol
+debug: setting request GET /socket.io/1/websocket/vsSWDK2yUzjnWNjHy9ol
+debug: set heartbeat interval for client vsSWDK2yUzjnWNjHy9ol
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"number of players","args":[{}]}
+{ id: 'vsSWDK2yUzjnWNjHy9ol',
+  namespace: 
+   { manager: 
+      { server: [Object],
+        namespaces: [Object],
+        sockets: [Circular],
+        _events: [Object],
+        settings: [Object],
+        handshaken: [Object],
+        connected: [Object],
+        open: [Object],
+        closed: {},
+        rooms: [Object],
+        roomClients: [Object],
+        oldListeners: [Object],
+        sequenceNumber: -87303643,
+        gc: [Object] },
+     name: '',
+     sockets: { vsSWDK2yUzjnWNjHy9ol: [Circular] },
+     auth: false,
+     flags: { endpoint: '', exceptions: [] },
+     _events: { connection: [Object] } },
+  manager: 
+   { server: 
+      { stack: [Object],
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 3,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        cache: {},
+        settings: [Object],
+        redirects: {},
+        isCallbacks: {},
+        _locals: [Object],
+        dynamicViewHelpers: {},
+        errorHandlers: [],
+        route: '/',
+        routes: [Object],
+        router: [Getter],
+        __usedRouter: true,
+        _connectionKey: '4:0.0.0.0:3000' },
+     namespaces: { '': [Object] },
+     sockets: 
+      { manager: [Circular],
+        name: '',
+        sockets: [Object],
+        auth: false,
+        flags: [Object],
+        _events: [Object] },
+     _events: 
+      { 'set:transports': [Object],
+        'set:store': [Function],
+        'set:origins': [Function],
+        'set:flash policy port': [Function],
+        'set:flash policy server': [Function] },
+     settings: 
+      { origins: '*:*',
+        log: true,
+        store: [Object],
+        logger: [Object],
+        static: [Object],
+        heartbeats: true,
+        resource: '/socket.io',
+        transports: [Object],
+        authorization: false,
+        blacklist: [Object],
+        'log level': 3,
+        'log colors': false,
+        'close timeout': 60,
+        'heartbeat interval': 25,
+        'heartbeat timeout': 60,
+        'polling duration': 20,
+        'flash policy server': true,
+        'flash policy port': 10843,
+        'destroy upgrade': true,
+        'destroy buffer size': 100000000,
+        'browser client': true,
+        'browser client cache': true,
+        'browser client minification': false,
+        'browser client etag': false,
+        'browser client expires': 315360000,
+        'browser client gzip': false,
+        'browser client handler': false,
+        'client store expiration': 15,
+        'match origin protocol': false },
+     handshaken: { vsSWDK2yUzjnWNjHy9ol: [Object] },
+     connected: { vsSWDK2yUzjnWNjHy9ol: true },
+     open: { vsSWDK2yUzjnWNjHy9ol: true },
+     closed: {},
+     rooms: { '': [Object] },
+     roomClients: { vsSWDK2yUzjnWNjHy9ol: [Object] },
+     oldListeners: [ [Function] ],
+     sequenceNumber: -87303643,
+     gc: 
+      { _idleTimeout: 10000,
+        _idlePrev: [Object],
+        _idleNext: [Object],
+        _idleStart: 1395777067586,
+        _onTimeout: [Function: wrapper],
+        _repeat: true } },
+  disconnected: false,
+  ackPackets: 0,
+  acks: {},
+  flags: { endpoint: '', room: '' },
+  readable: true,
+  store: 
+   { store: { options: undefined, clients: [Object], manager: [Object] },
+     id: 'vsSWDK2yUzjnWNjHy9ol',
+     data: {} },
+  _events: { error: [Function] } }
+info: transport end (undefined)
+debug: set close timeout for client vsSWDK2yUzjnWNjHy9ol
+debug: cleared close timeout for client vsSWDK2yUzjnWNjHy9ol
+debug: cleared heartbeat interval for client vsSWDK2yUzjnWNjHy9ol
+debug: discarding transport
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized Odu4KfrhnXh5b2gcy9om
+debug: setting request GET /socket.io/1/websocket/Odu4KfrhnXh5b2gcy9om
+debug: set heartbeat interval for client Odu4KfrhnXh5b2gcy9om
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"not ready","args":[{}]}
+
+
+
+
+
+No more Player
+{ id: 'Odu4KfrhnXh5b2gcy9om',
+  namespace: 
+   { manager: 
+      { server: [Object],
+        namespaces: [Object],
+        sockets: [Circular],
+        _events: [Object],
+        settings: [Object],
+        handshaken: [Object],
+        connected: [Object],
+        open: [Object],
+        closed: {},
+        rooms: [Object],
+        roomClients: [Object],
+        oldListeners: [Object],
+        sequenceNumber: -87303642,
+        gc: [Object] },
+     name: '',
+     sockets: { Odu4KfrhnXh5b2gcy9om: [Circular] },
+     auth: false,
+     flags: { endpoint: '', exceptions: [] },
+     _events: { connection: [Object] } },
+  manager: 
+   { server: 
+      { stack: [Object],
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 3,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        cache: {},
+        settings: [Object],
+        redirects: {},
+        isCallbacks: {},
+        _locals: [Object],
+        dynamicViewHelpers: {},
+        errorHandlers: [],
+        route: '/',
+        routes: [Object],
+        router: [Getter],
+        __usedRouter: true,
+        _connectionKey: '4:0.0.0.0:3000' },
+     namespaces: { '': [Object] },
+     sockets: 
+      { manager: [Circular],
+        name: '',
+        sockets: [Object],
+        auth: false,
+        flags: [Object],
+        _events: [Object] },
+     _events: 
+      { 'set:transports': [Object],
+        'set:store': [Function],
+        'set:origins': [Function],
+        'set:flash policy port': [Function],
+        'set:flash policy server': [Function] },
+     settings: 
+      { origins: '*:*',
+        log: true,
+        store: [Object],
+        logger: [Object],
+        static: [Object],
+        heartbeats: true,
+        resource: '/socket.io',
+        transports: [Object],
+        authorization: false,
+        blacklist: [Object],
+        'log level': 3,
+        'log colors': false,
+        'close timeout': 60,
+        'heartbeat interval': 25,
+        'heartbeat timeout': 60,
+        'polling duration': 20,
+        'flash policy server': true,
+        'flash policy port': 10843,
+        'destroy upgrade': true,
+        'destroy buffer size': 100000000,
+        'browser client': true,
+        'browser client cache': true,
+        'browser client minification': false,
+        'browser client etag': false,
+        'browser client expires': 315360000,
+        'browser client gzip': false,
+        'browser client handler': false,
+        'client store expiration': 15,
+        'match origin protocol': false },
+     handshaken: { Odu4KfrhnXh5b2gcy9om: [Object] },
+     connected: { Odu4KfrhnXh5b2gcy9om: true },
+     open: { Odu4KfrhnXh5b2gcy9om: true },
+     closed: {},
+     rooms: { '': [Object] },
+     roomClients: { Odu4KfrhnXh5b2gcy9om: [Object] },
+     oldListeners: [ [Function] ],
+     sequenceNumber: -87303642,
+     gc: 
+      { _idleTimeout: 10000,
+        _idlePrev: [Object],
+        _idleNext: [Object],
+        _idleStart: 1395777077588,
+        _onTimeout: [Function: wrapper],
+        _repeat: true } },
+  disconnected: false,
+  ackPackets: 0,
+  acks: {},
+  flags: { endpoint: '', room: '' },
+  readable: true,
+  store: 
+   { store: { options: undefined, clients: [Object], manager: [Object] },
+     id: 'Odu4KfrhnXh5b2gcy9om',
+     data: {} },
+  _events: { error: [Function] } }
+info: transport end (undefined)
+debug: set close timeout for client Odu4KfrhnXh5b2gcy9om
+debug: cleared close timeout for client Odu4KfrhnXh5b2gcy9om
+debug: cleared heartbeat interval for client Odu4KfrhnXh5b2gcy9om
+debug: discarding transport
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized rAzTzww-7n-abtYJy9on
+debug: setting request GET /socket.io/1/websocket/rAzTzww-7n-abtYJy9on
+debug: set heartbeat interval for client rAzTzww-7n-abtYJy9on
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"not ready","args":[{}]}
+
+
+
+
+
+No more Player
+{ id: 'rAzTzww-7n-abtYJy9on',
+  namespace: 
+   { manager: 
+      { server: [Object],
+        namespaces: [Object],
+        sockets: [Circular],
+        _events: [Object],
+        settings: [Object],
+        handshaken: [Object],
+        connected: [Object],
+        open: [Object],
+        closed: {},
+        rooms: [Object],
+        roomClients: [Object],
+        oldListeners: [Object],
+        sequenceNumber: -87303641,
+        gc: [Object] },
+     name: '',
+     sockets: { 'rAzTzww-7n-abtYJy9on': [Circular] },
+     auth: false,
+     flags: { endpoint: '', exceptions: [] },
+     _events: { connection: [Object] } },
+  manager: 
+   { server: 
+      { stack: [Object],
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 3,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        cache: {},
+        settings: [Object],
+        redirects: {},
+        isCallbacks: {},
+        _locals: [Object],
+        dynamicViewHelpers: {},
+        errorHandlers: [],
+        route: '/',
+        routes: [Object],
+        router: [Getter],
+        __usedRouter: true,
+        _connectionKey: '4:0.0.0.0:3000' },
+     namespaces: { '': [Object] },
+     sockets: 
+      { manager: [Circular],
+        name: '',
+        sockets: [Object],
+        auth: false,
+        flags: [Object],
+        _events: [Object] },
+     _events: 
+      { 'set:transports': [Object],
+        'set:store': [Function],
+        'set:origins': [Function],
+        'set:flash policy port': [Function],
+        'set:flash policy server': [Function] },
+     settings: 
+      { origins: '*:*',
+        log: true,
+        store: [Object],
+        logger: [Object],
+        static: [Object],
+        heartbeats: true,
+        resource: '/socket.io',
+        transports: [Object],
+        authorization: false,
+        blacklist: [Object],
+        'log level': 3,
+        'log colors': false,
+        'close timeout': 60,
+        'heartbeat interval': 25,
+        'heartbeat timeout': 60,
+        'polling duration': 20,
+        'flash policy server': true,
+        'flash policy port': 10843,
+        'destroy upgrade': true,
+        'destroy buffer size': 100000000,
+        'browser client': true,
+        'browser client cache': true,
+        'browser client minification': false,
+        'browser client etag': false,
+        'browser client expires': 315360000,
+        'browser client gzip': false,
+        'browser client handler': false,
+        'client store expiration': 15,
+        'match origin protocol': false },
+     handshaken: { 'rAzTzww-7n-abtYJy9on': [Object] },
+     connected: { 'rAzTzww-7n-abtYJy9on': true },
+     open: { 'rAzTzww-7n-abtYJy9on': true },
+     closed: {},
+     rooms: { '': [Object] },
+     roomClients: { 'rAzTzww-7n-abtYJy9on': [Object] },
+     oldListeners: [ [Function] ],
+     sequenceNumber: -87303641,
+     gc: 
+      { _idleTimeout: 10000,
+        _idlePrev: [Object],
+        _idleNext: [Object],
+        _idleStart: 1395777077588,
+        _onTimeout: [Function: wrapper],
+        _repeat: true } },
+  disconnected: false,
+  ackPackets: 0,
+  acks: {},
+  flags: { endpoint: '', room: '' },
+  readable: true,
+  store: 
+   { store: { options: undefined, clients: [Object], manager: [Object] },
+     id: 'rAzTzww-7n-abtYJy9on',
+     data: {} },
+  _events: { error: [Function] } }
+debug: emitting heartbeat for client rAzTzww-7n-abtYJy9on
+debug: websocket writing 2::
+debug: set heartbeat timeout for client rAzTzww-7n-abtYJy9on
+debug: got heartbeat packet
+debug: cleared heartbeat timeout for client rAzTzww-7n-abtYJy9on
+debug: set heartbeat interval for client rAzTzww-7n-abtYJy9on
+info: transport end (undefined)
+debug: set close timeout for client rAzTzww-7n-abtYJy9on
+debug: cleared close timeout for client rAzTzww-7n-abtYJy9on
+debug: cleared heartbeat interval for client rAzTzww-7n-abtYJy9on
+debug: discarding transport
+debug: served static content /socket.io.js
+debug: client authorized
+info: handshake authorized BnOwsI-GhayONP5ky9oo
+debug: setting request GET /socket.io/1/websocket/BnOwsI-GhayONP5ky9oo
+debug: set heartbeat interval for client BnOwsI-GhayONP5ky9oo
+debug: client authorized for 
+debug: websocket writing 1::
+debug: websocket writing 5:::{"name":"not ready","args":[{}]}
+
+
+
+
+
+No more Player
+{ id: 'BnOwsI-GhayONP5ky9oo',
+  namespace: 
+   { manager: 
+      { server: [Object],
+        namespaces: [Object],
+        sockets: [Circular],
+        _events: [Object],
+        settings: [Object],
+        handshaken: [Object],
+        connected: [Object],
+        open: [Object],
+        closed: {},
+        rooms: [Object],
+        roomClients: [Object],
+        oldListeners: [Object],
+        sequenceNumber: -87303640,
+        gc: [Object] },
+     name: '',
+     sockets: { 'BnOwsI-GhayONP5ky9oo': [Circular] },
+     auth: false,
+     flags: { endpoint: '', exceptions: [] },
+     _events: { connection: [Object] } },
+  manager: 
+   { server: 
+      { stack: [Object],
+        domain: null,
+        _events: [Object],
+        _maxListeners: 10,
+        _connections: 7,
+        connections: [Getter/Setter],
+        _handle: [Object],
+        _usingSlaves: false,
+        _slaves: [],
+        allowHalfOpen: true,
+        httpAllowHalfOpen: false,
+        timeout: 120000,
+        cache: {},
+        settings: [Object],
+        redirects: {},
+        isCallbacks: {},
+        _locals: [Object],
+        dynamicViewHelpers: {},
+        errorHandlers: [],
+        route: '/',
+        routes: [Object],
+        router: [Getter],
+        __usedRouter: true,
+        _connectionKey: '4:0.0.0.0:3000' },
+     namespaces: { '': [Object] },
+     sockets: 
+      { manager: [Circular],
+        name: '',
+        sockets: [Object],
+        auth: false,
+        flags: [Object],
+        _events: [Object] },
+     _events: 
+      { 'set:transports': [Object],
+        'set:store': [Function],
+        'set:origins': [Function],
+        'set:flash policy port': [Function],
+        'set:flash policy server': [Function] },
+     settings: 
+      { origins: '*:*',
+        log: true,
+        store: [Object],
+        logger: [Object],
+        static: [Object],
+        heartbeats: true,
+        resource: '/socket.io',
+        transports: [Object],
+        authorization: false,
+        blacklist: [Object],
+        'log level': 3,
+        'log colors': false,
+        'close timeout': 60,
+        'heartbeat interval': 25,
+        'heartbeat timeout': 60,
+        'polling duration': 20,
+        'flash policy server': true,
+        'flash policy port': 10843,
+        'destroy upgrade': true,
+        'destroy buffer size': 100000000,
+        'browser client': true,
+        'browser client cache': true,
+        'browser client minification': false,
+        'browser client etag': false,
+        'browser client expires': 315360000,
+        'browser client gzip': false,
+        'browser client handler': false,
+        'client store expiration': 15,
+        'match origin protocol': false },
+     handshaken: { 'BnOwsI-GhayONP5ky9oo': [Object] },
+     connected: { 'BnOwsI-GhayONP5ky9oo': true },
+     open: { 'BnOwsI-GhayONP5ky9oo': true },
+     closed: {},
+     rooms: { '': [Object] },
+     roomClients: { 'BnOwsI-GhayONP5ky9oo': [Object] },
+     oldListeners: [ [Function] ],
+     sequenceNumber: -87303640,
+     gc: 
+      { _idleTimeout: 10000,
+        _idlePrev: [Object],
+        _idleNext: [Object],
+        _idleStart: 1395777117610,
+        _onTimeout: [Function: wrapper],
+        _repeat: true } },
+  disconnected: false,
+  ackPackets: 0,
+  acks: {},
+  flags: { endpoint: '', room: '' },
+  readable: true,
+  store: 
+   { store: { options: undefined, clients: [Object], manager: [Object] },
+     id: 'BnOwsI-GhayONP5ky9oo',
+     data: {} },
+  _events: { error: [Function] } }
+info: transport end (undefined)
+debug: set close timeout for client BnOwsI-GhayONP5ky9oo
+debug: cleared close timeout for client BnOwsI-GhayONP5ky9oo
+debug: cleared heartbeat interval for client BnOwsI-GhayONP5ky9oo
+debug: discarding transport

@@ -5,9 +5,10 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , fs = require('fs');
+  , fs = require('fs')
 
 var app = module.exports = express.createServer();
+var io = require('socket.io').listen(app);
 
 // Configuration
 
@@ -29,7 +30,21 @@ app.configure('production', function(){
 });
 
 // Routes
-
+var player = [];
+io.sockets.on("connection",function(socket){
+	if(player.length <2 ){
+		player.push(socket)
+		if(player.length == 1){
+			player[0].emit("initalize player 1",{});
+		}
+		socket.emit("number of players",{number: player.id})
+	}else{
+		socket.emit("not ready",{})
+		console.log("\n\n\n\n\nNo more Player")
+	}
+	console.log(socket)
+	player
+})
 app.get('/', function(req,res){
 	fs.readFile('./index.html',function(err,cont){
 		if(err){
