@@ -37,12 +37,12 @@ io.sockets.on("connection",function(socket){
 		if(player.length == 1){
 			player[0].emit("initalize player 1",{});
 		}
-		socket.emit("number of players",{number: player.id})
+		socket.emit("number of players",{number: player.length})
 	}else{
 		socket.emit("not ready",{})
-		console.log("\n\n\n\n\nNo more Player")
+		//console.log("\n\n\n\n\nNo more Player")
 	}
-	console.log(socket)
+	//console.log(socket)
 	player
 })
 app.get('/', function(req,res){
@@ -57,6 +57,11 @@ app.get('/', function(req,res){
 	})
 });
 
+io.sockets.on("disconnect",function(data){
+	player = []
+	console.log(player)
+})
+
 app.get('/js/game.js',function(req,res){
 	fs.readFile('./js/game.js',function(err,cont){
 		if(err){
@@ -69,5 +74,6 @@ app.get('/js/game.js',function(req,res){
 	})
 })
 
-app.listen(3000);
+app.listen(8080);
+console.log(app.address())
 console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);

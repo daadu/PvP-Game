@@ -1,5 +1,5 @@
 //window.addEventListener("load",windowLoaded,false);
-
+var loop;
 function init(){//windowLoaded(){
 	gameApp();
 }
@@ -54,7 +54,9 @@ function gameApp(){
 			}else if (this.nexty+this.radius > canvas.height ) {//niche wall
 				/*this.vy = this.vy*-1;
 				this.nexty = canvas.height - this.radius;*/
-				document.write("GAME OVER   ")
+				//document.write("GAME OVER   ")
+				socket.emit("disconnect",{})
+				clearTimeout(loop)
 			} else if(this.nexty-this.radius < 0) {//upar wall
 				this.vy = this.vy*-1;
 				this.nexty = this.radius;

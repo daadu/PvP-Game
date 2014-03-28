@@ -26,9 +26,8 @@
 	<script type="text/javascript">
 	var socket = io.connect();
 	var player;
-	socket.on("disconn")
 	socket.on("number of players",function(data){
-		if(data.number==0){
+		if(data.number==1){
 			player = 1;
 			console.log("Waiting...")
 		}else{
