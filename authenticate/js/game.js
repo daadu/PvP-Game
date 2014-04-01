@@ -28,7 +28,7 @@ function gameApp(clientData){
 		this.radius = 15;
 		this.x = canvas.width/2;
 		this.y = canvas.height/2;
-		this.speed = 2;
+		this.speed = 10;
 		this.angle = Math.floor(clientData.randomAngle*360)
 		this.radians = this.angle * Math.PI/ 180;
 		this.vx = Math.cos(this.angle) * this.speed;
@@ -54,17 +54,17 @@ function gameApp(clientData){
 				this.vx = this.vx*-1;
 				this.nextx =this.radius;
 			}else if (this.nexty+this.radius > canvas.height ) {//niche wall
-				/*this.vy = this.vy*-1;
-				this.nexty = canvas.height - this.radius;*/
-				console.log("GAME OVER");
-				clearTimeout(loop);
-				socket.emit("gameover",{});
+				if(myBat.player1){
+					console.log("Game over")
+					clearTimeout(loop);
+					socket.emit("gameover",{});
+				}
 			} else if(this.nexty-this.radius < 0) {//upar wall
-				/*this.vy = this.vy*-1;
-				this.nexty = this.radius;*/
-				console.log("Game over")
-				clearTimeout(loop);
-				socket.emit("gameover",{});
+				if(!myBat.player1){
+					console.log("Game over")
+					clearTimeout(loop);
+					socket.emit("gameover",{});
+				}
 			}
 		}
 		this.render = function(){
@@ -82,8 +82,6 @@ function gameApp(clientData){
 		this.vx = 0;
 		this.angle = 0;
 		this.radians = this.angle * Math.PI/ 180;
-		/*this.angle;
-		this.vy;*/
 		this.x = canvas.width/2;
 		this.y = this.player1?canvas.height-this.thickness/2:this.thickness/2;
 		this.draw = function(){
@@ -102,11 +100,13 @@ function gameApp(clientData){
 	function drawScreen(){
 		//console.log(myBat,hisBat,ball)
 		canvas.width = canvas.width;
-		myBat.draw();
-		hisBat.draw();
-		ball.update();
-		ball.testWall();
-		ball.render();
+		if(globalConnectionStatus){
+			myBat.draw();
+			hisBat.draw();
+			ball.update();
+			ball.testWall();
+			ball.render();
+		}
 	}
 	function mouseMoved(e){
 		if(!mouseEventManager.start){
@@ -128,10 +128,9 @@ function gameApp(clientData){
 		}
 	}
 	function hitTest(ball,bat){
-		var lowerLimit = bat.x - bat.width/2;
-		var upperLimit = lowerLimit + bat.width;
+		var lowerLimit = bat.x - bat.width/2 - 2;
+		var upperLimit = lowerLimit + bat.width + 2;
 		var retval = false;
-		//console.log(distance,ball.radius,bat.thickness)
 		if (ball.x <= upperLimit && ball.x>= lowerLimit)
 		{
 			retval = true;
@@ -141,14 +140,13 @@ function gameApp(clientData){
 	function collide(ball,bat){
 		console.log("ITS a collision");
 		ball.vy = ball.vy*-1;
-		//ball.nexty = canvas.height - ball.radius- myBat.thickness/2;
 		if(ball.y < canvas.height){
-			ball.nexty = myBat.thickness + ball.radius;
+			ball.nexty = bat.thickness + ball.radius;
 		}else{
-			ball.nexty = canvas.height - myBat.thickness - ball.radius;
+			ball.nexty = canvas.height - bat.thickness - ball.radius;
 		}
 	}
-	var sendAfter = 10;//loops
+	var sendAfter = 15;//Frames
 	var sendCounter = 0;
 	function gameLoop(){
 		loop = setTimeout(gameLoop,1000/30);
@@ -158,11 +156,6 @@ function gameApp(clientData){
 		if( condition){
 			if(hitTest(ball,myBat)){
 				collide(ball,myBat)
-			}else{
-				delete ball;
-				//socket.disconnect();
-				//globalConnectionStatus = false;
-				
 			}
 		}
 		//sending data to socket
@@ -188,5 +181,4 @@ function gameApp(clientData){
 		drawScreen();
 	}
 	gameLoop();
-	//drawScreen();
 }
