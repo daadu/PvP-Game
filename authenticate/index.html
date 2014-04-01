@@ -24,23 +24,26 @@
 	<script type="text/javascript" src="js/game.js"></script>
 	<script src="/socket.io/socket.io.js"></script>
 	<script type="text/javascript">
+	var globalConnectionStatus = false;
 	var socket = io.connect();
-	var player;
-	socket.on("number of players",function(data){
-		if(data.number==1){
-			player = 1;
-			console.log("Waiting...")
-		}else{
-			player = 2;
-			console.log("Ready....")
-			init();
-		}
+	globalConnectionStatus = true;
+	socket.on("limit",function(data){
+		console.log("limit", data);
+		socket.disconnect();
+		globalConnectionStatus = false;
+		console.log("Socket disconnect")
 	})
-	socket.on("not ready",function(data){
-		console.log("Player limit")
+	socket.on("wait",function(data){
+		console.log("wait" , data)
 	})
-	socket.on("initalize player 1",function(data){
-		init();
+	socket.on("initialize",function(data){
+		console.log("initialize", data)
+		init(data);
+	})
+	socket.on("gameover_fromserver",function(data){
+		console.log("gameover_fromserver", data);
+		socket.disconnect();
+		globalConnectionStatus = false;
 	})
 	</script>
 </body>

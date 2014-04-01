@@ -30,20 +30,35 @@ app.configure('production', function(){
 });
 
 // Routes
-var player = [];
+var players = [];
 io.sockets.on("connection",function(socket){
-	if(player.length <2 ){
-		player.push(socket)
-		if(player.length == 1){
-			player[0].emit("initalize player 1",{});
+	if(players.length < 2){
+		players.push(socket);
+		if(players.length == 1){
+			socket.emit("wait",{})
+		}else{
+			var ballAngel = Math.random()
+			socket.emit("initialize",{player_1 : false,randomAngle : ballAngel});
+			players[0].emit("initialize",{player_1 : true,randomAngle : ballAngel})
 		}
-		socket.emit("number of players",{number: player.length})
+		socket.on("gameover",function(data){
+			players = [];
+			io.sockets.emit("gameover_fromserver",{})
+		})
+		socket.on("disconnect",function(data){
+			players = [];
+			io.sockets.emit("gameover_fromserver",{})
+		})
+		socket.on("gamedata",function(data){
+			if(data.player_1){
+				players[1].emit("serverdata",{to_player_1:false,ball:data.ball,bat:data.bat})
+			}else{
+				players[0].emit("serverdata",{to_player_1:true,ball:data.ball,bat:data.bat})
+			}
+		})
 	}else{
-		socket.emit("not ready",{})
-		//console.log("\n\n\n\n\nNo more Player")
+		socket.emit("limit",{})
 	}
-	//console.log(socket)
-	player
 })
 app.get('/', function(req,res){
 	fs.readFile('./index.html',function(err,cont){
@@ -57,10 +72,6 @@ app.get('/', function(req,res){
 	})
 });
 
-io.sockets.on("disconnect",function(data){
-	player = []
-	console.log(player)
-})
 
 app.get('/js/game.js',function(req,res){
 	fs.readFile('./js/game.js',function(err,cont){
